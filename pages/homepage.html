@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./homepage/style/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:regular,700,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./homepage/homepage.js" defer></script>
+    <title>Homepage</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="header">
+        <section class="modals">
+          <div class="modals__wrapper">
+            <div class="login__modal modal" data-modal="login__modal">
+              <h2 class="login__modal-title">Sign in</h2>
+              <p class="login__modal-descr">
+                Sign in to your account using email and password provided during
+                registration.
+              </p>
+              <form action="#" class="login__modal-form">
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Email</span>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Your working email"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="login__modal-form__footer">
+                  <div class="subscribe__info-checkbox">
+                    <input
+                      type="checkbox"
+                      id="agree"
+                      name="contact"
+                      value="email"
+                      class="subscribe__info-checkbox__input"
+                    />
+
+                    <label for="agree" class="subscribe__info-checkbox__label"
+                      >Keep me signed in</label
+                    >
+                  </div>
+
+                  <span class="login__form-footer__text">Forgot password?</span>
+                </div>
+
+                <button class="modal__button">Sign in</button>
+              </form>
+            </div>
+
+            <div class="register__modal modal" data-modal="register__modal">
+              <h2 class="login__modal-title">Sign up</h2>
+              <p class="login__modal-descr">
+                Registration takes less than a minute but gives you full control
+                over your studying.
+              </p>
+              <form action="#" class="login__modal-form">
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Full name</span>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Your full name"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Email</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your working email"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Confirm password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Repeat password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="subscribe__info-checkbox">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    name="contact"
+                    value="email"
+                    class="subscribe__info-checkbox__input"
+                  />
+
+                  <label for="agree" class="subscribe__info-checkbox__label"
+                    >Remember me</label
+                  >
+                </div>
+
+                <button class="modal__button">Sign up</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <div class="header__mobile"></div>
+
+        <div class="header__container">
+          <div class="header__top">
+            <div class="header__top-left">
+             
+              <h2 style=" font-size: 40px;">
+                Nav
+              </h2>
+               <img style="height: x; width: 30px;"
+                src="./homepage/src/icons/Group 1 (3).svg"
+                alt="logo"
+                class="header__top-left__img"
+              />
+
+              
+              <nav class="header__top-left__menu">
+                <ul class="header__left-menu__list">
+                  <li class="header__menu-list__item">
+                    <a href="homepage.html" class="header__list-item__link">Home</a>
+                  </li>
+                  
+                  <li class="header__menu-list__item">
+                    <a href="aboutUs.html" class="header__list-item__link">How It Works</a>
+                  </li>
+                  <!-- <li class="header__menu-list__item">
+                    <a href="support.html" class="header__list-item__link">Support</a>
+                  </li> -->
+                  <!-- <li class="header__menu-list__item">
+                    <a href="contact.html" class="header__list-item__link">Contact Us</a>
+                  </li> -->
+                </ul>
+              </nav>
+              
+            </div>
+
+            <div class="header__top-right">
+              <button class="header__top-right__button btn__homepage" onclick="window.location.href='../index.html';">
+                Create Map
+            </button>
+            
+              <div class="header__top-right__login">
+                <img
+                  src="./homepage/src/icons/login.svg"
+                  alt="log in"
+                  class="header__right-login__img"
+                />
+                <div class="header__right-login__text">
+                  <span
+                    class="header__login-text__login header__button"
+                    data-path__modal="login__modal"
+                    >Log in</span
+                  >
+                  /
+                  <span
+                    class="header__login-text__register header__button"
+                    data-path__modal="register__modal"
+                    >Register</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="header__hamb">
+              <div class="header__hamb-field">
+                <span class="header__hamb-field__line"></span>
+                <span class="header__hamb-field__line"></span>
+                <span class="header__hamb-field__line"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="header__center">
+            <div class="header__center-left">
+              <h1 class="header__center-left__title">
+                Smart Navigation with Advanced Technology
+              </h1>
+              <div class="header__center-left__buttons">
+                <button class="header__button-button__left btn__homepage">
+                  About us
+                </button>
+                <button class="header__button-right__button btn__homepage">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+            <div class="header__center-right">
+              <img style="width: 300px; height: 500px; margin-right: 60px;"
+                src="./homepage/src/img/Group 1000004708.png"
+                alt="image"
+                class="header__center-right__img"
+              />
+            </div>
+          </div>
+          <div class="header__bottom">
+            <ul class="header__bottom-statistics">
+              <!-- Total Locations Mapped -->
+              <li class="header__bottom-statistics__item">
+                <span class="header__statistics-item__number">500+</span>
+                <span class="header__statisrics-item__text">Locations Mapped</span>
+              </li>
+          
+              <div class="header__bottom-statistics__circle"></div>
+          
+              <!-- Devices Integrated -->
+              <li class="header__bottom-statistics__item">
+                <span class="header__statistics-item__number">1500+</span>
+                <span class="header__statisrics-item__text">Devices Integrated</span>
+              </li>
+          
+              <div class="header__bottom-statistics__circle"></div>
+          
+              <!-- Successful Navigation Queries -->
+              <li class="header__bottom-statistics__item">
+                <span class="header__statistics-item__number">2M+</span>
+                <span class="header__statisrics-item__text">Navigation Queries Processed</span>
+              </li>
+            </ul>
+          </div>
+          
+
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="about">
+          <div class="about__container" style="display: flex; align-items: center; gap: 20px;">
+            <!-- Image Section -->
+            <div class="about__img-box" style="flex: 1;">
+              <img
+                src="./homepage/src/img/download (1).jpeg"
+                alt="Indoor Positioning System"
+                class="about__img"
+                style="width: 100%; height: auto; border-radius: 8px;"
+              />
+            </div>
+        
+            <!-- Text Content Section -->
+            <div class="about__info" style="flex: 2;">
+              <h2 class="about__info-title" style="font-size: 24px; margin-bottom: 20px;">
+                Why You Need an Indoor Positioning System?
+              </h2>
+              <ul class="about__info-list" style="list-style: none; padding: 0; margin: 0;">
+                <li class="about__info-list__item" style="display: flex; align-items: start; margin-bottom: 15px;">
+                  <img
+                    src="./homepage/src/icons/list-item.svg"
+                    alt="icon"
+                    class="about__list-item-img"
+                    style="width: 24px; height: 24px; margin-right: 10px;"
+                  />
+                  <p class="about__list-item-descr">
+                    Navigate large indoor spaces like malls, airports, and hospitals with ease and accuracy.
+                  </p>
+                </li>
+                <li class="about__info-list__item" style="display: flex; align-items: start; margin-bottom: 15px;">
+                  <img
+                    src="./homepage/src/icons/list-item.svg"
+                    alt="icon"
+                    class="about__list-item-img"
+                    style="width: 24px; height: 24px; margin-right: 10px;"
+                  />
+                  <p class="about__list-item-descr">
+                    Enhance visitor experiences with real-time location tracking and guided tours.
+                  </p>
+                </li>
+                <li class="about__info-list__item" style="display: flex; align-items: start; margin-bottom: 15px;">
+                  <img
+                    src="./homepage/src/icons/list-item.svg"
+                    alt="icon"
+                    class="about__list-item-img"
+                    style="width: 24px; height: 24px; margin-right: 10px;"
+                  />
+                  <p class="about__list-item-descr">
+                    Improve operational efficiency for businesses by tracking assets and staff movements.
+                  </p>
+                </li>
+                <li class="about__info-list__item" style="display: flex; align-items: start; margin-bottom: 15px;">
+                  <img
+                    src="./homepage/src/icons/list-item.svg"
+                    alt="icon"
+                    class="about__list-item-img"
+                    style="width: 24px; height: 24px; margin-right: 10px;"
+                  />
+                  <p class="about__list-item-descr">
+                    Ensure safety by enabling precise emergency evacuation guidance and incident response.
+                  </p>
+                </li>
+                <li class="about__info-list__item" style="display: flex; align-items: start; margin-bottom: 15px;">
+                  <img
+                    src="./homepage/src/icons/list-item.svg"
+                    alt="icon"
+                    class="about__list-item-img"
+                    style="width: 24px; height: 24px; margin-right: 10px;"
+                  />
+                  <p class="about__list-item-descr">
+                    Deliver personalized and context-aware content based on user location indoors.
+                  </p>
+                </li>
+                <li class="about__info-list__item" style="display: flex; align-items: start; margin-bottom: 15px;">
+                  <img
+                    src="./homepage/src/icons/list-item.svg"
+                    alt="icon"
+                    class="about__list-item-img"
+                    style="width: 24px; height: 24px; margin-right: 10px;"
+                  />
+                  <p class="about__list-item-descr">
+                    Utilize advanced analytics for better understanding of indoor traffic and user behavior.
+                  </p>
+                </li>
+              </ul>
+              <button class="about__info-button btn__homepage" style="margin-top: 20px;">
+                Learn More About Indoor Positioning
+              </button>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section class="benefits">
+          <div class="benefits__container">
+            <!-- Header -->
+            <div class="benefits__header">
+              <span class="benefits__header-text">Our Benefits</span>
+              <h2 class="benefits__header-title">How We Enhance Indoor Accuracy</h2>
+            </div>
+        
+            <!-- Body -->
+            <div class="benefits__body">
+              <div class="benefits__body-bar">
+                <!-- Benefit Item 1 -->
+                <div class="benefits__body-bar__item">
+                  <span class="benefits__item-text">
+                    Precise Algorithms for Better Positioning
+                  </span>
+                </div>
+        
+                <!-- Benefit Item 2 -->
+                <div class="benefits__body-bar__item">
+                  <span class="benefits__item-text">
+                    Advanced Sensor Integration
+                  </span>
+                </div>
+        
+                <!-- Benefit Item 3 -->
+                <div class="benefits__body-bar__item">
+                  <span class="benefits__item-text">
+                    High-Resolution Indoor Mapping
+                  </span>
+                </div>
+        
+                <!-- Benefit Item 4 -->
+                <div class="benefits__body-bar__item">
+                  <span class="benefits__item-text">
+                    AI-Driven Location Insights
+                  </span>
+                </div>
+        
+                <!-- Benefit Item 5 -->
+                <div class="benefits__body-bar__item">
+                  <span class="benefits__item-text">
+                    Robust Connectivity Solutions
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        
+
+       
+
+        <section class="testimonials">
+          <div class="testimonials__uniqcontainer">
+            <div class="testimonials__header">
+              <span class="testimonials__header-text">SERVICES</span>
+              <h2 class="testimonials__header-title">What Our Indoor Positioning System Offers</h2>
+            </div>
+            <div class="testimonials__body">
+              <picture class="testimonials__body-leftArrow__box">
+                <img
+                  src="./aboutUs/src/icons/arrowLeft.svg"
+                  alt="arrow"
+                  class="testimonials__body-leftArrow swiper-button-prev"
+                />
+              </picture>
+        
+              <div class="testimonials__box swiper-container">
+                <div class="testimonials__wrapper swiper-wrapper">
+                  <div class="testimonials__item swiper-slide">
+                    <picture class="testimonials__item-left">
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                    </picture>
+                    <div class="testimonials__item-content">
+                      <p class="testimonials__item-content__descr">
+                        Real-Time Navigation: Our system provides accurate indoor navigation for users in malls, airports, and hospitals, ensuring seamless movement across complex spaces.
+                      </p>
+                      <div class="testimonials__item-content__personal">
+                        <div class="testimonials__item-ava__box"></div>
+                        <div class="testimonials__item-info">
+                          <span class="testimonials__item-info__name">Service</span>
+                          <span class="testimonials__item-info__position">Navigation</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="testimonials__item swiper-slide">
+                    <picture class="testimonials__item-left">
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                    </picture>
+                    <div class="testimonials__item-content">
+                      <p class="testimonials__item-content__descr">
+                        Asset Tracking: Keep track of valuable assets and equipment within your facility in real time to improve efficiency and security.
+                      </p>
+                      <div class="testimonials__item-content__personal">
+                        <div class="testimonials__item-ava__box"></div>
+                        <div class="testimonials__item-info">
+                          <span class="testimonials__item-info__name">Service</span>
+                          <span class="testimonials__item-info__position">Tracking</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="testimonials__item swiper-slide">
+                    <picture class="testimonials__item-left">
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                    </picture>
+                    <div class="testimonials__item-content">
+                      <p class="testimonials__item-content__descr">
+                        Emergency Assistance: Enable effective emergency evacuation guidance by providing precise routes and real-time updates during critical situations.
+                      </p>
+                      <div class="testimonials__item-content__personal">
+                        <div class="testimonials__item-ava__box"></div>
+                        <div class="testimonials__item-info">
+                          <span class="testimonials__item-info__name">Service</span>
+                          <span class="testimonials__item-info__position">Safety</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="testimonials__item swiper-slide">
+                    <picture class="testimonials__item-left">
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                    </picture>
+                    <div class="testimonials__item-content">
+                      <p class="testimonials__item-content__descr">
+                        Personalized Experiences: Deliver tailored content, offers, and notifications to users based on their indoor location.
+                      </p>
+                      <div class="testimonials__item-content__personal">
+                        <div class="testimonials__item-ava__box"></div>
+                        <div class="testimonials__item-info">
+                          <span class="testimonials__item-info__name">Service</span>
+                          <span class="testimonials__item-info__position">Customization</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <picture class="testimonials__body-rightArrow__box">
+                <img
+                  src="./aboutUs/src/icons/arrowRight.svg"
+                  alt="arrow"
+                  class="testimonials__body-rightArrow swiper-button-next"
+                />
+              </picture>
+            </div>
+          </div>
+        </section>
+        
+        
+
+        <section class="blog">
+          <div class="blog__container">
+            <div class="blog__header">
+              <div class="blog__header-left">
+                <span class="blog__header-left__text">Our Blog</span>
+                <h2 class="blog__header-left__title">Latest Insights on Indoor Positioning Systems</h2>
+              </div>
+              <button class="blog__header-button btn__homepage">
+                Explore Blog
+              </button>
+            </div>
+            <div class="blog__body">
+              <div class="blog__body-post">
+                <div class="blog__post-content">
+                  <div class="blog__post-content__top">
+                    <span class="blog__content-top__course">Technology</span>
+                    <span class="blog__content-top__vertical"></span>
+                    <div class="blog__content-top__data">
+                      <span class="blog__data-date">October 20, 2024</span>
+                    </div>
+                    <span class="blog__content-top__vertical"></span>
+                    <div class="blog__content-top__time">
+                      <span class="blog__time-time">10 min read</span>
+                    </div>
+                  </div>
+        
+                  <div class="blog__post-content__info">
+                    <h4 class="blog__content-info__title">
+                      How Indoor Navigation Transforms Shopping Malls
+                    </h4>
+                    <p class="blog__content-info__descr">
+                      Discover how indoor positioning systems are revolutionizing customer experiences in malls by providing real-time navigation and tailored offers...
+                    </p>
+                    <div class="blog__content-info__click">
+                      <span class="blog__info-click__text">Read More</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="blog__body-post">
+                <div class="blog__post-content">
+                  <div class="blog__post-content__top">
+                    <span class="blog__content-top__course">Business</span>
+                    <span class="blog__content-top__vertical"></span>
+                    <div class="blog__content-top__data">
+                      <span class="blog__data-date">October 15, 2024</span>
+                    </div>
+                    <span class="blog__content-top__vertical"></span>
+                    <div class="blog__content-top__time">
+                      <span class="blog__time-time">8 min read</span>
+                    </div>
+                  </div>
+        
+                  <div class="blog__post-content__info">
+                    <h4 class="blog__content-info__title">
+                      The Power of Asset Tracking with Indoor Positioning
+                    </h4>
+                    <p class="blog__content-info__descr">
+                      Learn how businesses are leveraging indoor positioning systems to monitor assets and improve operational efficiency...
+                    </p>
+                    <div class="blog__content-info__click">
+                      <span class="blog__info-click__text">Read More</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="blog__body-post">
+                <div class="blog__post-content">
+                  <div class="blog__post-content__top">
+                    <span class="blog__content-top__course">Emergency</span>
+                    <span class="blog__content-top__vertical"></span>
+                    <div class="blog__content-top__data">
+                      <span class="blog__data-date">October 10, 2024</span>
+                    </div>
+                  </div>
+                  <div class="blog__post-content__info">
+                    <h4 class="blog__content-info__title">
+                      Emergency Preparedness with Indoor Positioning
+                    </h4>
+                    <p class="blog__content-info__descr">
+                      How indoor positioning systems play a critical role in guiding people during emergencies and ensuring safety in real time...
+                    </p>
+                    <div class="blog__content-info__click">
+                      <span class="blog__info-click__text">Read More</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+
+        <section class="subscribe">
+          <div class="subscribe__container">
+            <div class="subscribe__center">
+              <span class="subscribe__center-text">Don’t misslead anything</span>
+              <h2 class="subscribe__center-title">
+                Subscribe to the NavX for your place
+              </h2>
+              <form class="subscribe__center-form">
+                <input
+                  type="email"
+                  placeholder="Your working email"
+                  class="subscribe__center-form__input"
+                />
+                <button
+                  class="subscribe__center-form__button btn__homepage"
+                  type="reset"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <div class="footer__body">
+          <div class="footer__container">
+            <!-- Company Info Section -->
+            <div class="footer__body-left">
+              <!-- <div class="footer__left-img__box">
+                <img
+                  src="./homepage/src/icons/footer/logo.svg"
+                  alt="IPS logo"
+                  class="footer__left-img"
+                />
+              </div> -->
+              <p class="footer__left-descr">
+                NavX Indoor Positioning System revolutionizes navigation in complex 
+                indoor environments. From malls to airports, we provide precise 
+                positioning technology for enhanced user experience and operational efficiency.
+              </p>
+              <div class="footer__left-socials">
+                <a href="https://facebook.com" class="footer__socials-link" target="_blank">
+                  <img src="./homepage/src/icons/footer/facebook.svg" alt="facebook" class="footer__socials-img" />
+                </a>
+                <a href="https://twitter.com" class="footer__socials-link" target="_blank">
+                  <img src="./homepage/src/icons/footer/twitter.svg" alt="twitter" class="footer__socials-img" />
+                </a>
+                <a href="https://linkedin.com" class="footer__socials-link" target="_blank">
+                  <img src="./homepage/src/icons/footer/linkedIn.svg" alt="linkedin" class="footer__socials-img" />
+                </a>
+              </div>
+            </div>
+      
+            <!-- Quick Links Section -->
+            <ul class="footer__body-list">
+              <span class="footer__body-list__title">Quick Links</span>
+              <li class="footer__body-list__item"><a href="#about-us">About Us</a></li>
+              <li class="footer__body-list__item"><a href="#solutions">Solutions</a></li>
+              <li class="footer__body-list__item"><a href="#blog">Blog</a></li>
+              <li class="footer__body-list__item"><a href="#contact">Contact</a></li>
+            </ul>
+      
+            <!-- Solutions Section -->
+            <ul class="footer__body-list">
+              <span class="footer__body-list__title">Solutions</span>
+              <li class="footer__body-list__item">Retail Navigation</li>
+              <li class="footer__body-list__item">Airport Guidance</li>
+              <li class="footer__body-list__item">Healthcare Tracking</li>
+              <li class="footer__body-list__item">Warehouse Optimization</li>
+            </ul>
+      
+            <!-- Contact Section -->
+            <div class="footer__body-contact">
+              <span class="footer__body-contact__title">Contact Us</span>
+              <div class="footer__body-contact__item">
+                <img src="./homepage/src/icons/footer/phone.svg" alt="phone" class="footer__contact-img" />
+                <span class="footer-contact__text">(405) 555-0128</span>
+              </div>
+              <div class="footer__body-contact__item">
+                <img src="./homepage/src/icons/footer/mail.svg" alt="mail" class="footer__contact-img" />
+                <span class="footer-contact__text">support@navx.com</span>
+              </div>
+            </div>
+      
+            <!-- Subscription Section -->
+            <div class="footer__body-newsletter">
+              <span class="footer__body-newsletter__title">Stay Updated</span>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="footer__body-newsletter__input"
+              />
+              <p class="footer__body-newsletter__warning">
+                *Subscribe to our updates to learn about the latest advancements in indoor positioning technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Footer Bottom Section -->
+        <div class="footer__footer">
+          <div class="footer__container">
+            <p class="footer__footer-left">
+              © 2024 NavX Indoor Positioning. All rights reserved.
+            </p>
+            <a class="footer__footer-right" href="#header">GO TO TOP</a>
+          </div>
+        </div>
+      </footer>
+      
+    </div>
+
+    <script src="./homepage.js"></script>
+  </body>
+</html>

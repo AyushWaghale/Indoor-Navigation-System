@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Test</title>
+</head>
+<body>
+    <div id="landingPage"></div> <!-- This is the single div where content will be appended -->
+
+    <script>
+        // Function to apply CSS styles
+        function applyStyles() {
+            const style = document.createElement('style');
+            style.textContent = `
+                /* General reset */
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                /* Full-page styling */
+                body, html {
+                    height: 100%;
+                    font-family: Arial, sans-serif;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #f3f4f6;
+                }
+                /* Container styling */
+                .container {
+                    text-align: center;
+                    padding: 20px;
+                    border-radius: 8px;
+                    background-color: #ffffff;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    max-width: 400px;
+                    width: 90%;
+                }
+                /* Title styling */
+                .title {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #333;
+                    margin-bottom: 20px;
+                }
+                /* Button styling */
+                .button {
+                    display: block;
+                    width: 100%;
+                    padding: 15px;
+                    margin: 10px 0;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #fff;
+                    background-color: #007bff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    text-align: center;
+                }
+                .button:hover {
+                    background-color: #0056b3;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Function to create the landing page elements
+        function createLandingPage() {
+            // Create the landing page container
+            const landingPage = document.getElementById('landingPage');
+            landingPage.className = 'container';
+
+            // Create and append title
+            const title = document.createElement('h1');
+            title.className = 'title';
+            title.textContent = 'Build Your Indoor Map';
+            landingPage.appendChild(title);
+
+            // Create and append buttons
+            const createMapButton = document.createElement('button');
+            createMapButton.className = 'button';
+            createMapButton.textContent = 'Create New Map';
+            createMapButton.onclick = createNewMap; // Attach function
+            landingPage.appendChild(createMapButton);
+
+            const updateMapButton = document.createElement('button');
+            updateMapButton.className = 'button';
+            updateMapButton.textContent = 'Update Existing Map';
+            updateMapButton.onclick = updateExistingMap; // Attach function
+            landingPage.appendChild(updateMapButton);
+        }
+
+        // Function for creating a new map
+        function createNewMap() {
+            alert("Create New Map button clicked");
+            // Add your functionality for creating a new map here
+        }
+
+        // Function for updating an existing map
+        function updateExistingMap() {
+            alert("Update Existing Map button clicked");
+            // Add your functionality for updating an existing map here
+        }
+
+        // Execute functions when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            applyStyles();
+            createLandingPage();
+        });
+    </script>
+</body>
+</html>
